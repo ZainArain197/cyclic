@@ -26,7 +26,7 @@ app.get("*", (req, res) => {
         res.status(500).send(err) 
     }
 })
-
+ 
 const cors = require('cors');
 const corsOptions = {
     origin: 'http://localhost:3000',

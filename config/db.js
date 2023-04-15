@@ -1,5 +1,5 @@
-// const MONGO_URI = "mongodb+srv://hacker197:hacker197@cluster0.7ekp0od.mongodb.net/test"
- const MONGO_URI ='mongodb://127.0.0.1:27017/hack'
+const MONGO_URI = "mongodb+srv://mzain197197:project27@cluster0.xdx1wtk.mongodb.net/?retryWrites=true&w=majority"
+//  const MONGO_URI ='mongodb://127.0.0.1:27017/hack'
 const mongoose = require('mongoose')
 
 const connectDB = async () => {
