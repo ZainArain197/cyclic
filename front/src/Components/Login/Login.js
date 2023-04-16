@@ -57,7 +57,7 @@ const Login = () => {
 
           <div className="signup__field">
           <LoginSocialFacebook
-            appId="557121933074345"
+            appId="947646676587231"
             onResolve={(response) => {
               console.log(response.data);
               fetch("/fbregister", {
