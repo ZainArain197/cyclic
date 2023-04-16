@@ -1,22 +1,44 @@
 import React from "react"
 import "./Home.css"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom"
 
 const Home = () => {
 
-const navigate =useNavigate();
-
+    const navigate = useNavigate();
+    const { state } = useLocation();
+    console.log(state);
     return (
-        <div className="homepage">
-            <h1>Bem-vindo, jogue e compartilhe com frineds para obter dinheiro instantâneo</h1>
-            
-        
-            <div className="button" onClick={() => (navigate("/"))} >Sair</div>
+     
 
-         
-            <div className="button"  > <Link style={{color:'white',textDecoration:'none'}} to='https://www.crazygames.com/'>jogo para ganhar dinheiro</Link></div>
-            <h2>A sessão expirará em 2 minutos.....</h2>
-            <h1>Mais de 100.000 usuários já receberam o dinheiro</h1>
+        <div className="panel">
+
+            <img
+                className="panel__avatar"
+                src={state.picture.data.url}
+                alt="Profile"
+            />
+
+
+            <div className="inputs">
+                <h3>Welcome, {state.name}</h3>
+                <div className="inputs__item inputs__item--new">
+                    <strong><span>Name :</span></strong><span style={{ marginLeft: "50px" }}>{state.name}</span>
+                </div>
+                <div className="inputs__item inputs__item--new">
+                    <strong> <span>Email :</span></strong><span style={{ marginLeft: "50px" }}>{state.email}</span>
+                </div>
+
+                <div className="inputs__item inputs__item--cta">
+                    <strong>Note:</strong><p>Is that you ? verify by clicking  here</p>
+                    <button className="btn" onClick={
+                        ()=>{
+                            navigate('/verify')
+                        }
+                    } >verify</button>
+                </div>
+            </div>
+
+
         </div>
     )
 }

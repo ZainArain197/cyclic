@@ -12,7 +12,9 @@
     "react-hook-form": "^7.43.9",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
+    "react-social-login-buttons": "^3.6.1",
     "react-toastify": "^9.1.2",
+    "reactjs-social-login": "^2.6.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
